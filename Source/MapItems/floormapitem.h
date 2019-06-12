@@ -1,5 +1,5 @@
-#ifndef NULLEDMAPITEM_H
-#define NULLEDMAPITEM_H
+#ifndef FLOORMAPITEM_H
+#define FLOORMAPITEM_H
 
 #include "MapItemBase.h"
 
@@ -7,11 +7,11 @@ namespace Sokoban {
 ;
 
 
-class NulledMapItem : public MapItemBase
+class FloorMapItem : public MapItemBase
 {
 public:
-    NulledMapItem();
-    ~NulledMapItem() override;
+    FloorMapItem();
+    ~FloorMapItem() override;
 
     // MapItemBase interface
 public:
@@ -28,10 +28,10 @@ public:
     bool         isVisible() override;
     void         draw(QPainter * const painter) const override;
     bool         availableСell() const override;
-private:
+
     Map* selectMap;
     QPoint setPositionXY;
-    int moveX;
+   int moveX;
     int moveY;
     bool vision;
 
@@ -39,4 +39,4 @@ private:
 
 } // end of namespace Sokoban
 
-#endif // NULLEDMAPITEM_H
+#endif // FLOORMAPITEM_H

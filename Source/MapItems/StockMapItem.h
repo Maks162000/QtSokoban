@@ -1,17 +1,17 @@
-#ifndef NULLEDMAPITEM_H
-#define NULLEDMAPITEM_H
+#ifndef WALLMAPITEM_H
+#define WALLMAPITEM_H
 
+#include <QWidget>
 #include "MapItemBase.h"
 
 namespace Sokoban {
 ;
 
-
-class NulledMapItem : public MapItemBase
+class StockMapItem : public MapItemBase
 {
 public:
-    NulledMapItem();
-    ~NulledMapItem() override;
+    StockMapItem();
+      ~StockMapItem() override;
 
     // MapItemBase interface
 public:
@@ -27,6 +27,7 @@ public:
     void         hide() override;
     bool         isVisible() override;
     void         draw(QPainter * const painter) const override;
+    bool         activeStock() const override;
     bool         availableСell() const override;
 private:
     Map* selectMap;
@@ -34,9 +35,8 @@ private:
     int moveX;
     int moveY;
     bool vision;
-
 };
 
-} // end of namespace Sokoban
 
-#endif // NULLEDMAPITEM_H
+} // end of namespace Sokoban
+#endif // WALLMAPITEM_H

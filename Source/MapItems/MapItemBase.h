@@ -71,7 +71,31 @@ public:
     // Check whether the item is moveable
     //
     virtual bool isMoveable() const = 0;
-    //? virtual bool canMove(int newX, int newY) const = 0;
+
+    //
+    // Checks whether the object can be moved to the  coordinate
+    //
+    virtual bool canMove(int newX, int newY) const = 0;
+
+
+
+    /* Checks cell type*/
+
+    //
+    // checks the object on the void
+    //
+    virtual bool availableСell() const= 0;
+
+    //
+    // Checks box availability on stock
+    //
+    virtual bool activeStock() const= 0;
+
+
+
+
+
+
 
 /* Visible's methods */
     //

@@ -25,6 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    MapItems/BoxMapItem.cpp \
+    MapItems/FloorMapItem.cpp \
+    MapItems/PlayerMapItem.cpp \
+    MapItems/StockMapItem.cpp \
     main.cpp \
     MainWindow.cpp \
     Map\Map.cpp \
@@ -36,6 +40,10 @@ SOURCES += \
 HEADERS += \
     Error.h \
     MainWindow.h \
+    MapItems/BoxMapItem.h \
+    MapItems/FloorMapItem.h \
+    MapItems/PlayerMapItem.h \
+    MapItems/StockMapItem.h \
     Map\Map.h \
     Map\MapLoader.h \
     Map\MapSaver.h \

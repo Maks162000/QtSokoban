@@ -7,11 +7,11 @@ namespace Sokoban {
 ;
 
 
-class NulledMapItem : public MapItemBase
+class PlayerMapItem : public MapItemBase
 {
 public:
-    NulledMapItem();
-    ~NulledMapItem() override;
+    PlayerMapItem();
+    ~PlayerMapItem() override;
 
     // MapItemBase interface
 public:
@@ -27,6 +27,7 @@ public:
     void         hide() override;
     bool         isVisible() override;
     void         draw(QPainter * const painter) const override;
+    bool         canMove(int newX, int newY)const override;
     bool         availableСell() const override;
 private:
     Map* selectMap;
